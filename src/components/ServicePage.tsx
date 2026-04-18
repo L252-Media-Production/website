@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface ServicePageProps {
   title: string;
   tagline: string;
   description: string;
   highlights: { heading: string; body: string }[];
+  heroImage?: string;
   ctaText?: string;
 }
 
@@ -13,13 +15,29 @@ export default function ServicePage({
   tagline,
   description,
   highlights,
+  heroImage,
   ctaText = "Ready to get started?",
 }: ServicePageProps) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate-900 text-white py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="relative text-white py-20 px-4 overflow-hidden">
+        {heroImage ? (
+          <>
+            <Image
+              src={heroImage}
+              alt={title}
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-slate-900/65" />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-slate-900" />
+        )}
+        <div className="relative max-w-3xl mx-auto text-center">
           <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Our Services
           </p>

@@ -39,6 +39,7 @@ export default function EventProductionPage() {
           body: "Our crew stays for the duration of your event, handling troubleshooting and adjustments in real time.",
         },
       ]}
+      heroImage="/images/event-production.jpg"
       ctaText="Let's make your next event unforgettable."
     />
   );

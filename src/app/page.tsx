@@ -1,17 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   {
     title: "AV Installation",
     href: "/services/av-installation",
     icon: "📽️",
+    image: null,
     description:
       "Custom audio-visual installations for your space — projectors, sound systems, and livestream setups that ensure every seat gets crystal-clear audio and engaging visuals.",
   },
   {
     title: "Event Production",
     href: "/services/event-production",
-    icon: "🎙️",
+    icon: null,
+    image: "/images/event-production.jpg",
     description:
       "Professional sound, lighting, and visuals for worship concerts, conferences, and special celebrations — seamless and impactful from start to finish.",
   },
@@ -19,6 +22,7 @@ const services = [
     title: "IT & Network",
     href: "/services/it-network",
     icon: "🌐",
+    image: null,
     description:
       "Reliable IT and network infrastructure — secure Wi-Fi, seamless connectivity for livestreaming, and solutions that keep your team and congregation connected.",
   },
@@ -26,6 +30,7 @@ const services = [
     title: "Training",
     href: "/services/training",
     icon: "🎓",
+    image: null,
     description:
       "Hands-on training in audio, projection, and livestreaming. We break down complex concepts into practical steps so you can operate confidently and independently.",
   },
@@ -35,8 +40,17 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate-900 text-white py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative text-white py-24 px-4 overflow-hidden">
+        <Image
+          src="/images/main-header.jpg"
+          alt="L252 Media Production"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-slate-900/70" />
+        <div className="relative max-w-4xl mx-auto text-center">
           <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">
             L252 Media Production
           </p>
@@ -58,7 +72,7 @@ export default function Home() {
             </Link>
             <Link
               href="/services"
-              className="px-8 py-3 border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-semibold rounded-md transition-colors"
+              className="px-8 py-3 border border-slate-400 hover:border-white text-slate-300 hover:text-white font-semibold rounded-md transition-colors"
             >
               Our Services
             </Link>
@@ -82,13 +96,29 @@ export default function Home() {
               <Link
                 key={service.href}
                 href={service.href}
-                className="group p-6 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all"
+                className="group rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all overflow-hidden flex flex-col"
               >
-                <div className="text-3xl mb-4">{service.icon}</div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-slate-500">{service.description}</p>
+                {service.image ? (
+                  <div className="relative h-40 w-full flex-shrink-0">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
+                ) : (
+                  <div className="h-40 flex items-center justify-center bg-slate-50 flex-shrink-0">
+                    <span className="text-4xl">{service.icon}</span>
+                  </div>
+                )}
+                <div className="p-5 flex-1">
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-slate-500">{service.description}</p>
+                </div>
               </Link>
             ))}
           </div>
