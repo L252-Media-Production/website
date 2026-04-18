@@ -52,7 +52,7 @@ export default function PrivacyPage() {
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Third-Party Payment Processors</h2>
           <p className="text-slate-600 leading-relaxed mb-8">
-            We use InvoiceNinja to issue invoices, and payments are processed securely through Stripe and PayPal. L252 Media Production does not store payment information. Please review the privacy policies of Stripe and PayPal for more details.
+            We use InvoiceNinja to issue invoices, and payments are processed securely through Stripe and PayPal. L252 Media Production does not store payment information. Please review the privacy policies of <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 font-medium">Stripe</a> and <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 font-medium">PayPal</a> for more details.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Data Deletion Requests</h2>
