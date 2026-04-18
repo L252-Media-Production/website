@@ -69,17 +69,27 @@ export default function ServicePage({
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-blue-600 text-white text-center">
-        <h2 className="text-2xl font-bold mb-4">{ctaText}</h2>
-        <p className="text-blue-100 mb-8 max-w-lg mx-auto">
-          Contact us to discuss your project. We&apos;ll put together a custom solution that fits your needs and budget.
-        </p>
-        <Link
-          href="/contact"
-          className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-md hover:bg-blue-50 transition-colors"
-        >
-          Get a Free Quote
-        </Link>
+      <section className="relative py-16 px-4 bg-blue-600 text-white text-center overflow-hidden">
+        <Image
+          src="/images/logo-wireframe.png"
+          alt=""
+          width={320}
+          height={100}
+          aria-hidden="true"
+          className="absolute right-8 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none select-none hidden sm:block"
+        />
+        <div className="relative">
+          <h2 className="text-2xl font-bold mb-4">{ctaText}</h2>
+          <p className="text-blue-100 mb-8 max-w-lg mx-auto">
+            Contact us to discuss your project. We&apos;ll put together a custom solution that fits your needs and budget.
+          </p>
+          <Link
+            href="/contact"
+            className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-md hover:bg-blue-50 transition-colors"
+          >
+            Get a Free Quote
+          </Link>
+        </div>
       </section>
     </>
   );

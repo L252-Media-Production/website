@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -16,6 +17,7 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Client Portal", href: "https://billing.twomediapros.com/client" },
 ];
 
 export default function Nav() {
@@ -27,13 +29,15 @@ export default function Nav() {
     <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-blue-400 font-bold text-xl tracking-tight">
-              L252
-            </span>
-            <span className="text-white font-semibold text-sm hidden sm:block">
-              Media Production
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo-white.png"
+              alt="L252 Media Production"
+              width={140}
+              height={40}
+              className="h-9 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

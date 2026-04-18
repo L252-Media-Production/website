@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="py-16 px-4 bg-white">
-        <div className="max-w-3xl mx-auto prose prose-slate max-w-none">
+        <div className="max-w-2xl mx-auto">
           <p className="text-lg text-slate-600 leading-relaxed mb-8">
             At L252 Media Production, we are committed to protecting your privacy. This privacy policy outlines how we collect, use, and protect your personal information.
           </p>
@@ -76,10 +76,6 @@ export default function PrivacyPage() {
           <p className="text-slate-600 leading-relaxed mb-8">
             We may update this policy from time to time. Any changes will be posted on this page, and, where appropriate, notified to you via email. Please review this policy periodically to stay informed.
           </p>
-
-          <div className="mt-12 pt-8 border-t border-slate-200 text-sm text-slate-500">
-            <p>© {new Date().getFullYear()} L252 Media Production. All Rights Reserved.</p>
-          </div>
         </div>
       </section>
     </>

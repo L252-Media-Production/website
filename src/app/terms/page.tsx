@@ -16,7 +16,7 @@ export default function TermsPage() {
       </section>
 
       <section className="py-16 px-4 bg-white">
-        <div className="max-w-3xl mx-auto prose prose-slate max-w-none">
+        <div className="max-w-2xl mx-auto">
           <p className="text-lg text-slate-600 leading-relaxed mb-8">
             These terms govern your use of L252 Media Production's website and services.
           </p>
@@ -60,10 +60,6 @@ export default function TermsPage() {
           <p className="text-slate-600 leading-relaxed mb-12">
             These terms are governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law principles.
           </p>
-
-          <div className="mt-12 pt-8 border-t border-slate-200 text-sm text-slate-500">
-            <p>© {new Date().getFullYear()} L252 Media Production. All Rights Reserved.</p>
-          </div>
         </div>
       </section>
     </>

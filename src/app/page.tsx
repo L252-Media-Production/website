@@ -170,17 +170,27 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 bg-blue-600 text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to elevate your space?</h2>
-        <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-          Tell us about your project and we&apos;ll put together a solution that fits your vision and your budget.
-        </p>
-        <Link
-          href="/contact"
-          className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-md hover:bg-blue-50 transition-colors"
-        >
-          Contact Us Today
-        </Link>
+      <section className="relative py-20 px-4 bg-blue-600 text-white text-center overflow-hidden">
+        <Image
+          src="/images/logo-wireframe.png"
+          alt=""
+          width={360}
+          height={110}
+          aria-hidden="true"
+          className="absolute right-8 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none select-none hidden sm:block"
+        />
+        <div className="relative">
+          <h2 className="text-3xl font-bold mb-4">Ready to elevate your space?</h2>
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+            Tell us about your project and we&apos;ll put together a solution that fits your vision and your budget.
+          </p>
+          <Link
+            href="/contact"
+            className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-md hover:bg-blue-50 transition-colors"
+          >
+            Contact Us Today
+          </Link>
+        </div>
       </section>
     </>
   );
