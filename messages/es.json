@@ -152,7 +152,7 @@
   "Contact": {
     "meta": {
       "title": "Contacto | L252 Media Production",
-      "description": "Póngase en contacto con L252 Media Production para obtener una cotización gratuita sobre instalación AV, producción de eventos, TI y redes, o servicios de capacitación."
+      "description": "Póngase en contacto con L252 Media Production para obtener una cotización gratuita sobre instalación AV, producción de eventos, informática y redes, o servicios de capacitación."
     },
     "badge": "Contáctenos",
     "heroTitle": "Contáctenos",
@@ -172,7 +172,7 @@
     "selectService": "Seleccione un servicio...",
     "avInstallation": "Instalación AV",
     "eventProduction": "Producción de Eventos",
-    "itNetwork": "TI y Redes",
+    "itNetwork": "Informática y Redes",
     "training": "Capacitación",
     "multipleServices": "Múltiples Servicios",
     "notSureYet": "Aún No Estoy Seguro",
@@ -188,7 +188,7 @@
   "Services": {
     "meta": {
       "title": "Servicios | L252 Media Production",
-      "description": "Instalación AV, producción de eventos, infraestructura TI y redes, y capacitación para iglesias y empresas."
+      "description": "Instalación AV, producción de eventos, infraestructura de Informática y Redes, y capacitación para iglesias y empresas."
     },
     "badge": "L252 Media Production",
     "heroTitle": "Nuestros Servicios",
@@ -209,9 +209,9 @@
         "description": "Dé vida a sus eventos de iglesia o empresa con servicios profesionales de producción de eventos. Ya sea un concierto de adoración, una conferencia o una celebración especial, gestionamos el sonido, la iluminación y los visuales para crear una experiencia fluida e impactante que involucre a su audiencia y deje memorias duraderas."
       },
       {
-        "title": "TI y Redes",
+        "title": "Informática y Redes",
         "href": "/services/it-network",
-        "description": "Empodere a su organización con infraestructura TI y de red confiable. Desde Wi-Fi seguro para personal e invitados hasta conectividad fluida para transmisiones en vivo, nuestras soluciones garantizan que su ministerio o empresa se mantenga conectado — en línea y fuera de línea."
+        "description": "Empodere a su organización con infraestructura de Informática y Redes confiable. Desde Wi-Fi seguro para personal e invitados hasta conectividad fluida para transmisiones en vivo, nuestras soluciones garantizan que su ministerio o empresa se mantenga conectado — en línea y fuera de línea."
       },
       {
         "title": "Capacitación",
@@ -294,10 +294,10 @@
   },
   "ITNetwork": {
     "meta": {
-      "title": "TI y Redes | L252 Media Production",
-      "description": "Infraestructura TI y de red confiable para iglesias y empresas — Wi-Fi seguro, conectividad para transmisiones en vivo y soporte TI continuo."
+      "title": "Informática y Redes | L252 Media Production",
+      "description": "Infraestructura de Informática y de red confiable para iglesias y empresas — Wi-Fi seguro, conectividad para transmisiones en vivo y soporte de Informática continuo."
     },
-    "title": "TI y Redes",
+    "title": "Informática y Redes",
     "tagline": "Mantenga su organización conectada con infraestructura de red confiable y segura construida para el ministerio moderno y los negocios.",
     "description": "Una red sólida es la columna vertebral de todo lo que hace — desde transmitir servicios hasta aceptar donaciones digitales y permitir que su equipo trabaje de manera eficiente. Diseñamos e implementamos soluciones TI y de red adaptadas a iglesias y empresas, garantizando conectividad confiable para el personal, los invitados y las operaciones de medios. Ya sea que necesite una nueva infraestructura o una actualización de su configuración existente, lo manejamos con cuidado y pensando en la confiabilidad a largo plazo.",
     "ctaText": "¿Listo para una red que trabaje tan duro como usted?",
