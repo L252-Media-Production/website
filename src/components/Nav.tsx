@@ -16,7 +16,6 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
   { label: "Client Portal", href: "https://billing.twomediapros.com/client" },
 ];
 
@@ -85,7 +84,7 @@ export default function Nav() {
               href="/contact"
               className="ml-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-md transition-colors"
             >
-              Get a Quote
+              Contact Us
             </Link>
           </nav>
 
