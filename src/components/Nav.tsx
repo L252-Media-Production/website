@@ -108,20 +108,30 @@ export default function Nav() {
             </Link>
           </nav>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded-md text-slate-300 hover:text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          {/* Mobile right controls */}
+          <div className="md:hidden flex items-center gap-1">
+            <button
+              onClick={toggleLocale}
+              className="px-3 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white border border-slate-600 hover:border-slate-400 transition-colors"
+              aria-label="Switch language"
+            >
+              {t("switchLang")}
+            </button>
+
+            <button
+              className="p-2 rounded-md text-slate-300 hover:text-white"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {menuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
@@ -154,12 +164,6 @@ export default function Nav() {
             <Link href="/contact" className="block px-3 py-2 text-sm text-slate-300 hover:text-white" onClick={() => setMenuOpen(false)}>
               {t("contactUs")}
             </Link>
-            <button
-              onClick={() => { toggleLocale(); setMenuOpen(false); }}
-              className="block w-full text-left px-3 py-2 text-sm text-slate-300 hover:text-white"
-            >
-              {t("switchLang")}
-            </button>
             <Link
               href="/contact"
               className="block mx-3 mt-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-md text-center"
