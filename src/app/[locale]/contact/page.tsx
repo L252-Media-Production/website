@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/contact">) {
   const { locale } = await params;
@@ -107,99 +108,7 @@ function ContactPageContent() {
           </div>
 
           <div className="lg:col-span-3">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-1">
-                    {t("firstName")}
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder={t("firstNamePlaceholder")}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 mb-1">
-                    {t("lastName")}
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder={t("lastNamePlaceholder")}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
-                  {t("emailAddress")}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder={t("emailPlaceholder")}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="organization" className="block text-sm font-medium text-slate-700 mb-1">
-                  {t("organization")}
-                </label>
-                <input
-                  type="text"
-                  id="organization"
-                  name="organization"
-                  className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder={t("organizationPlaceholder")}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-slate-700 mb-1">
-                  {t("serviceInterest")}
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  <option value="">{t("selectService")}</option>
-                  <option value="av-installation">{t("avInstallation")}</option>
-                  <option value="event-production">{t("eventProduction")}</option>
-                  <option value="it-network">{t("itNetwork")}</option>
-                  <option value="training">{t("training")}</option>
-                  <option value="multiple">{t("multipleServices")}</option>
-                  <option value="unsure">{t("notSureYet")}</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
-                  {t("projectMessage")}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder={t("projectPlaceholder")}
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-md transition-colors"
-              >
-                {t("sendMessage")}
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>

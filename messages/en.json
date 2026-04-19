@@ -178,7 +178,13 @@
     "notSureYet": "Not Sure Yet",
     "projectMessage": "Tell us about your project",
     "projectPlaceholder": "Describe your space, goals, current setup, and any specific needs...",
-    "sendMessage": "Send Message"
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Thank you for your message!",
+    "successBody": "We've received your inquiry and will reach out to you soon. Check your inbox for a confirmation email.",
+    "errorTitle": "Something went wrong.",
+    "errorBody": "Your message couldn't be sent. Please try again or email us directly at contact@twomediapros.com.",
+    "recaptchaError": "Please complete the reCAPTCHA verification."
   },
   "Services": {
     "meta": {
