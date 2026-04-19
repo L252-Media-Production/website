@@ -4,7 +4,15 @@
       "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
       "Bash(npx next *)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
-      "Bash(curl -s -o /dev/null -w '%{http_code}' http://localhost:3000__TRACKED_VAR__)"
+      "Bash(curl -s -o /dev/null -w '%{http_code}' http://localhost:3000__TRACKED_VAR__)",
+      "Bash(npm show *)",
+      "Bash(npm install *)",
+      "Bash(python3 -c \"import sys,json; p=json.load\\(sys.stdin\\); exports=p.get\\('exports',{}\\); print\\(list\\(exports.keys\\(\\)\\)\\)\")",
+      "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/i18n\")",
+      "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/messages\")",
+      "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/av-installation\")",
+      "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/event-production\")",
+      "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/it-network\")"
     ]
   }
 }

@@ -1,0 +1,419 @@
+{
+  "Nav": {
+    "home": "Home",
+    "services": "Services",
+    "avInstallation": "AV Installation",
+    "eventProduction": "Event Production",
+    "itNetwork": "IT & Network",
+    "training": "Training",
+    "about": "About",
+    "clientPortal": "Client Portal",
+    "contactUs": "Contact Us",
+    "switchLang": "🇪🇸"
+  },
+  "Footer": {
+    "tagline": "Expert AV Solutions with IT Support You Can Trust — serving churches and businesses.",
+    "servicesHeading": "Services",
+    "companyHeading": "Company",
+    "avInstallation": "AV Installation",
+    "eventProduction": "Event Production",
+    "itNetwork": "IT & Network",
+    "training": "Training",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "getAQuote": "Get a Quote",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© {year} L252 Media Production. All rights reserved."
+  },
+  "ServicePage": {
+    "ourServices": "Our Services",
+    "whatsIncluded": "What's Included",
+    "ctaDescription": "Contact us to discuss your project. We'll put together a custom solution that fits your needs and budget.",
+    "getAFreeQuote": "Get a Free Quote"
+  },
+  "Home": {
+    "meta": {
+      "title": "L252 Media Production | Expert AV Solutions & IT Support",
+      "description": "L252 Media Production delivers expert AV solutions and IT support for churches and businesses. AV installation, event production, IT networking, and training."
+    },
+    "badge": "L252 Media Production",
+    "heroTitle": "Expert AV Solutions with <blue>IT Support</blue> You Can Trust",
+    "heroSubtitle": "We help churches and businesses communicate their message with professional audio-visual installations, live event production, and reliable IT infrastructure.",
+    "getAFreeQuote": "Get a Free Quote",
+    "ourServices": "Our Services",
+    "whatWeDo": "What We Do",
+    "whatWeDoSubtitle": "From planning to installation to ongoing support, we deliver end-to-end AV and IT solutions tailored to your space and goals.",
+    "viewAllServices": "View all services →",
+    "whyL252": "Why L252?",
+    "whyL252Subtitle": "We combine technical expertise with a commitment to serving the organizations and communities that matter.",
+    "ctaTitle": "Ready to elevate your space?",
+    "ctaSubtitle": "Tell us about your project and we'll put together a solution that fits your vision and your budget.",
+    "contactUsToday": "Contact Us Today",
+    "servicesGrid": [
+      {
+        "title": "AV Installation",
+        "description": "Custom audio-visual installations for your space — projectors, sound systems, and livestream setups that ensure every seat gets crystal-clear audio and engaging visuals."
+      },
+      {
+        "title": "Event Production",
+        "description": "Professional sound, lighting, and visuals for worship concerts, conferences, and special celebrations — seamless and impactful from start to finish."
+      },
+      {
+        "title": "IT & Network",
+        "description": "Reliable IT and network infrastructure — secure Wi-Fi, seamless connectivity for livestreaming, and solutions that keep your team and congregation connected."
+      },
+      {
+        "title": "Training",
+        "description": "Hands-on training in audio, projection, and livestreaming. We break down complex concepts into practical steps so you can operate confidently and independently."
+      }
+    ],
+    "whyItems": [
+      {
+        "title": "Tailored Solutions",
+        "body": "No two spaces are the same. We design every installation and system around your unique needs, budget, and vision."
+      },
+      {
+        "title": "Church & Business Focused",
+        "body": "We understand the nuances of worship environments and professional business settings — and know how to serve both well."
+      },
+      {
+        "title": "Ongoing Support",
+        "body": "Our relationship doesn't end at installation. We're here for training, troubleshooting, and growth as your needs evolve."
+      }
+    ]
+  },
+  "About": {
+    "meta": {
+      "title": "About Us | L252 Media Production",
+      "description": "Meet the founders of L252 Media Production — Emmanuel Acosta and Jancarlos Reyes — and learn why we're passionate about serving churches and businesses with expert AV and IT solutions."
+    },
+    "badge": "Who We Are",
+    "heroTitle": "About L252 Media Production",
+    "heroSubtitle": "Expert AV Solutions with IT Support You Can Trust — built on a passion for helping organizations communicate with clarity and impact.",
+    "intro1": "L252 Media Production exists to help churches and businesses communicate their message with the clarity, quality, and reliability it deserves. We believe that great technology should serve the mission — not get in the way of it.",
+    "intro2": "Our team brings hands-on experience in audio-visual installation, live event production, IT infrastructure, and technical training. We've worked in environments ranging from small community churches to large-scale business events, and we bring the same level of care and professionalism to every project.",
+    "intro3": "What sets us apart is our commitment to the people we serve. We don't just install equipment and disappear. We take the time to understand your space, your team, and your goals — and we stay engaged to make sure everything works the way it should, long after the project is done.",
+    "foundersHeading": "Meet the Founders",
+    "foundersSubtitle": "L252 is led by two professionals whose combined expertise covers the full spectrum of media production and IT — united by a shared commitment to serving people well.",
+    "founders": [
+      {
+        "role": "Co-Founder",
+        "name": "Emmanuel Acosta",
+        "image": "/images/Emmanuel-Acosta.jpg",
+        "bio": [
+          "With over 15 years of experience in the film and media industry, Emmanuel Acosta is a seasoned cinematographer and editor known for his versatility and creative precision. His expertise spans audio engineering, lighting design, livestreaming, and camera operation, allowing him to handle multiple aspects of production with ease. Emmanuel has contributed to a diverse range of projects, including cinematic productions, commercials, live events, and corporate videos, delivering high-quality visuals that resonate with audiences.",
+          "Whether capturing compelling footage or crafting seamless narratives in the editing suite, Emmanuel excels at turning ideas into captivating visual stories. His in-depth knowledge of livestreaming technologies, combined with hands-on experience in video and audio production, ensures technical excellence in every project. From live broadcasts and music videos to interviews and branded content, Emmanuel's collaborative approach and attention to detail have earned him a reputation as a trusted professional in the evolving media landscape."
+        ],
+        "skills": [
+          "Cinematography & Editing",
+          "Audio Engineering",
+          "Lighting Design",
+          "Livestreaming",
+          "Live Event Production"
+        ]
+      },
+      {
+        "role": "Co-Founder",
+        "name": "Jancarlos Reyes",
+        "image": "/images/Jancarlos-Reyes.jpg",
+        "bio": [
+          "Jancarlos Reyes is a highly experienced IT professional with over 10 years in IT infrastructure, networking, and modern workplace solutions. He has extensive expertise in Microsoft 365 and Google Workspace, leveraging these platforms for more than 7 years to streamline operations, improve collaboration, and enhance productivity across businesses, nonprofits, and churches. Jancarlos also holds a Dante Level 3 certification, highlighting his advanced skills in audio networking and proficiency with complex AV systems.",
+          "With 15+ years of experience supporting nonprofit organizations and churches, Jancarlos has developed a deep understanding of their unique technological needs. His expertise extends to network design, server management, IT support, and cloud services, providing seamless and secure technology solutions. Passionate about bridging the gap between technology and mission, Jancarlos empowers organizations to thrive by integrating the latest tools and innovations. Whether managing cloud platforms, optimizing AV systems, or coordinating live events, his technical expertise and collaborative mindset make him a valuable partner for clients and teams alike."
+        ],
+        "skills": [
+          "IT Infrastructure & Networking",
+          "Microsoft 365 & Google Workspace",
+          "Dante Level 3 Certified",
+          "AV Systems",
+          "Cloud Services"
+        ]
+      }
+    ],
+    "valuesHeading": "Our Values",
+    "values": [
+      {
+        "title": "Excellence",
+        "body": "We hold ourselves to a high standard in everything we do — from the quality of our installations to the clarity of our communication."
+      },
+      {
+        "title": "Simplicity",
+        "body": "Technology should feel empowering, not overwhelming. We design systems and train teams with usability in mind."
+      },
+      {
+        "title": "Service",
+        "body": "We are genuinely invested in the success of the organizations we work with. Your mission drives our work."
+      }
+    ],
+    "ctaTitle": "Let's work together",
+    "ctaSubtitle": "Whether you have a specific project in mind or just want to explore your options, we'd love to hear from you.",
+    "getInTouch": "Get in Touch"
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact | L252 Media Production",
+      "description": "Get in touch with L252 Media Production for a free quote on AV installation, event production, IT & network, or training services."
+    },
+    "badge": "Get in Touch",
+    "heroTitle": "Contact Us",
+    "heroSubtitle": "Tell us about your project. We'll get back to you with a customized solution and a free quote.",
+    "letsWorkTogether": "Let's work together",
+    "sidebarDesc": "Whether you're planning a full AV installation, need help with an upcoming event, or just want to explore your options — we're here to help. Fill out the form or reach us directly through any of the channels below.",
+    "followUs": "Follow Us",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Jane",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Smith",
+    "emailAddress": "Email Address",
+    "emailPlaceholder": "jane@yourorganization.com",
+    "organization": "Organization / Church Name",
+    "organizationPlaceholder": "Your church or business",
+    "serviceInterest": "Service Interest",
+    "selectService": "Select a service...",
+    "avInstallation": "AV Installation",
+    "eventProduction": "Event Production",
+    "itNetwork": "IT & Network",
+    "training": "Training",
+    "multipleServices": "Multiple Services",
+    "notSureYet": "Not Sure Yet",
+    "projectMessage": "Tell us about your project",
+    "projectPlaceholder": "Describe your space, goals, current setup, and any specific needs...",
+    "sendMessage": "Send Message"
+  },
+  "Services": {
+    "meta": {
+      "title": "Services | L252 Media Production",
+      "description": "AV installation, event production, IT & network infrastructure, and training for churches and businesses."
+    },
+    "badge": "L252 Media Production",
+    "heroTitle": "Our Services",
+    "heroSubtitle": "End-to-end AV and IT solutions for churches and businesses — designed, installed, and supported by our team.",
+    "learnMore": "Learn more →",
+    "ctaTitle": "Not sure where to start?",
+    "ctaSubtitle": "Reach out and tell us about your goals. We'll help you figure out the right solution.",
+    "contactUs": "Contact Us",
+    "items": [
+      {
+        "title": "AV Installation",
+        "href": "/services/av-installation",
+        "description": "Elevate your worship services or business presentations with custom audio-visual installations. From projectors and sound systems to livestream setups, we design and install solutions that enhance the message and ensure every seat enjoys crystal-clear audio and engaging visuals."
+      },
+      {
+        "title": "Event Production",
+        "href": "/services/event-production",
+        "description": "Bring your church or business events to life with professional event production services. Whether it's a worship concert, conference, or special celebration, we handle sound, lighting, and visuals to create a seamless, impactful experience that engages your audience and leaves lasting memories."
+      },
+      {
+        "title": "IT & Network",
+        "href": "/services/it-network",
+        "description": "Empower your organization with reliable IT and network infrastructure. From secure Wi-Fi for staff and guests to seamless connectivity for livestreaming, our solutions ensure your ministry or business stays connected — online and offline."
+      },
+      {
+        "title": "Training",
+        "href": "/services/training",
+        "description": "We offer hands-on training in audio, projection, and livestreaming to help you master the essentials. Our approach breaks down complex concepts into simple, practical steps, minimizing technical jargon and empowering you with the confidence to operate independently."
+      }
+    ]
+  },
+  "AVInstallation": {
+    "meta": {
+      "title": "AV Installation | L252 Media Production",
+      "description": "Custom audio-visual installations for churches and businesses — projectors, sound systems, and livestream setups designed to enhance your space."
+    },
+    "title": "AV Installation",
+    "tagline": "Elevate every service, meeting, and message with professional audio-visual systems built for your space.",
+    "description": "We design and install custom audio-visual solutions for churches and businesses of all sizes. From projectors and screens to surround sound systems and full livestream setups, every installation is tailored to ensure that every seat in your space enjoys crystal-clear audio and engaging visuals. Whether you're starting from scratch or upgrading an existing system, our team handles design, installation, and configuration from end to end.",
+    "ctaText": "Ready to transform your space?",
+    "highlights": [
+      {
+        "heading": "Projectors & Display Systems",
+        "body": "High-brightness projectors, LED walls, and screens sized and positioned for maximum visibility in your space."
+      },
+      {
+        "heading": "Sound Systems",
+        "body": "Professionally tuned speaker systems, subwoofers, and monitor mixes that deliver clear, even audio across every seat."
+      },
+      {
+        "heading": "Livestream Infrastructure",
+        "body": "Camera setups, capture hardware, encoding equipment, and platform integration for reliable, high-quality live broadcasts."
+      },
+      {
+        "heading": "Stage & Lighting",
+        "body": "Stage lighting design and installation that creates the right atmosphere — from intimate gatherings to large-scale productions."
+      },
+      {
+        "heading": "Control Systems",
+        "body": "User-friendly control panels and automation so your team can operate complex AV systems with confidence."
+      },
+      {
+        "heading": "Cable Management & Infrastructure",
+        "body": "Clean, organized cabling and infrastructure that keeps your system reliable and easy to maintain long-term."
+      }
+    ]
+  },
+  "EventProduction": {
+    "meta": {
+      "title": "Event Production | L252 Media Production",
+      "description": "Professional event production for churches and businesses — sound, lighting, and visuals for concerts, conferences, and special celebrations."
+    },
+    "title": "Event Production",
+    "tagline": "Bring your events to life with professional sound, lighting, and visuals that create moments people remember.",
+    "description": "Whether you're hosting a worship concert, corporate conference, community celebration, or special service, our event production team ensures everything runs smoothly. We handle the full technical picture — audio mixing, stage lighting, video projection, and on-site coordination — so you can focus on your audience and your message. We serve churches and businesses alike, bringing the same level of care and professionalism to every event.",
+    "ctaText": "Let's make your next event unforgettable.",
+    "highlights": [
+      {
+        "heading": "Live Sound Mixing",
+        "body": "Experienced audio engineers managing front-of-house and monitor mixes for bands, speakers, and hybrid formats."
+      },
+      {
+        "heading": "Stage Lighting Design",
+        "body": "Dynamic lighting that sets the right tone — from vibrant concert atmospheres to polished corporate presentations."
+      },
+      {
+        "heading": "Video & Projection",
+        "body": "Live IMAG, lyrics, slides, and video playback managed with precision to keep your audience engaged."
+      },
+      {
+        "heading": "Livestream Production",
+        "body": "Multi-camera live broadcasts with graphics, transitions, and reliable streaming so your remote audience feels present."
+      },
+      {
+        "heading": "Equipment Rental & Setup",
+        "body": "We bring the gear your event needs — microphones, speakers, lighting rigs, cameras — and set it all up."
+      },
+      {
+        "heading": "On-Site Technical Support",
+        "body": "Our crew stays for the duration of your event, handling troubleshooting and adjustments in real time."
+      }
+    ]
+  },
+  "ITNetwork": {
+    "meta": {
+      "title": "IT & Network | L252 Media Production",
+      "description": "Reliable IT and network infrastructure for churches and businesses — secure Wi-Fi, connectivity for livestreaming, and ongoing IT support."
+    },
+    "title": "IT & Network",
+    "tagline": "Keep your organization connected with reliable, secure network infrastructure built for modern ministry and business.",
+    "description": "A strong network is the backbone of everything you do — from livestreaming services to accepting digital giving to enabling your team to work efficiently. We design and deploy IT and network solutions tailored to churches and businesses, ensuring dependable connectivity for staff, guests, and media operations. Whether you need a fresh infrastructure buildout or an upgrade to your existing setup, we handle it with care and long-term reliability in mind.",
+    "ctaText": "Ready for a network that works as hard as you do?",
+    "highlights": [
+      {
+        "heading": "Secure Wi-Fi Networks",
+        "body": "Segregated networks for staff, guests, and AV systems — ensuring security, performance, and reliability across your facility."
+      },
+      {
+        "heading": "Livestream Connectivity",
+        "body": "Wired and wireless infrastructure optimized for consistent, high-bandwidth video uploads with minimal latency or drops."
+      },
+      {
+        "heading": "Structured Cabling",
+        "body": "Professional Cat6/fiber installation with clean cable management, labeling, and documentation for easy future maintenance."
+      },
+      {
+        "heading": "Network Hardware & Routing",
+        "body": "Enterprise-grade routers, switches, and access points configured for performance, security, and easy management."
+      },
+      {
+        "heading": "IT Support & Maintenance",
+        "body": "Ongoing support, software updates, hardware troubleshooting, and monitoring so your systems stay running when it matters."
+      },
+      {
+        "heading": "Workstation & Device Setup",
+        "body": "Setup and configuration of computers, tablets, and peripheral devices for staff and production teams."
+      }
+    ]
+  },
+  "Training": {
+    "meta": {
+      "title": "Training | L252 Media Production",
+      "description": "Hands-on AV and livestream training for churches and businesses — audio, projection, and broadcasting made simple and practical."
+    },
+    "title": "Training",
+    "tagline": "Gain the confidence to run your own systems — we teach practical skills without the technical overwhelm.",
+    "description": "Great equipment is only as effective as the people operating it. Our training program is designed to help your volunteers and staff master audio, projection, and livestreaming at their own pace. We strip away the jargon and focus on the practical steps that matter for your specific setup. Whether you're onboarding new volunteers or upskilling your existing team, we'll build their confidence so your ministry or business can operate independently and with excellence.",
+    "ctaText": "Empower your team to operate with confidence.",
+    "highlights": [
+      {
+        "heading": "Audio Operations",
+        "body": "Hands-on training covering mixing boards, microphone techniques, monitor mixes, and live sound fundamentals for your specific system."
+      },
+      {
+        "heading": "Projection & Presentation",
+        "body": "Learn to run ProPresenter, EasyWorship, or other presentation software — including slide management, transitions, and troubleshooting."
+      },
+      {
+        "heading": "Livestream Production",
+        "body": "Camera operation, switching, encoding, and platform management (YouTube, Facebook, and more) for live and recorded broadcasts."
+      },
+      {
+        "heading": "Volunteer Onboarding",
+        "body": "Structured training programs that bring new volunteers up to speed quickly with role-specific guides and supervised practice."
+      },
+      {
+        "heading": "Troubleshooting & Problem Solving",
+        "body": "We teach your team how to diagnose and fix common issues on the fly — so technical hiccups don't derail your services or events."
+      },
+      {
+        "heading": "Custom Training Plans",
+        "body": "Training sessions tailored to your team's current skill level, your specific equipment, and your schedule."
+      }
+    ]
+  },
+  "PrivacyPolicy": {
+    "meta": {
+      "title": "Privacy Policy | L252 Media Production",
+      "description": "Privacy policy for L252 Media Production — how we collect, use, and protect your personal information."
+    },
+    "heroTitle": "Privacy Policy",
+    "lastUpdated": "Last updated: {year}",
+    "intro": "At L252 Media Production, we are committed to protecting your privacy. This privacy policy outlines how we collect, use, and protect your personal information.",
+    "infoWeCollect": "Information We Collect",
+    "personalInfo": "Personal Information",
+    "personalInfoText": "We may collect your name, email address, phone number, and other details when you fill out forms on our website.",
+    "usageData": "Usage Data",
+    "usageDataText": "We collect data about how you interact with our website, such as IP address, browser type, and time spent on our pages.",
+    "howWeUse": "How We Use Your Information",
+    "useList": [
+      "To provide our AV and IT/Network installation services.",
+      "To communicate with you regarding your inquiries or billing.",
+      "To improve our website and services based on your usage patterns."
+    ],
+    "cookies": "Cookies and Tracking",
+    "cookiesText": "We use cookies and similar technologies to track user interactions on our website and improve user experience. Cookies are small files that are stored on your device. You can disable cookies through your browser settings; however, this may affect some functionalities of our website.",
+    "dataRetention": "Data Retention",
+    "dataRetentionText": "We retain personal information for as long as necessary to fulfill the purposes for which it was collected, unless a longer retention period is required by law.",
+    "thirdParty": "Third-Party Payment Processors",
+    "thirdPartyText": "We use InvoiceNinja to issue invoices, and payments are processed securely through Stripe and PayPal. L252 Media Production does not store payment information. Please review the privacy policies of <stripe>Stripe</stripe> and <paypal>PayPal</paypal> for more details.",
+    "dataDeletion": "Data Deletion Requests",
+    "dataDeletionText": "If you wish to request the deletion of your personal information, please contact us at <email>privacy@twomediapros.com</email>. We will respond to your request within the timeframe required by applicable law.",
+    "dataSecurity": "Data Security",
+    "dataSecurityText": "We use industry-standard security measures to protect your information from unauthorized access or disclosure.",
+    "changes": "Changes to This Privacy Policy",
+    "changesText": "We may update this policy from time to time. Any changes will be posted on this page, and, where appropriate, notified to you via email. Please review this policy periodically to stay informed."
+  },
+  "Terms": {
+    "meta": {
+      "title": "Terms of Service | L252 Media Production",
+      "description": "Terms of service for L252 Media Production — governing your use of our website and services."
+    },
+    "heroTitle": "Terms of Service",
+    "lastUpdated": "Last updated: {year}",
+    "intro": "These terms govern your use of L252 Media Production's website and services.",
+    "servicesProvided": "Services Provided",
+    "servicesProvidedText": "L252 Media Production specializes in AV and IT/Network installations. All services provided are subject to these terms.",
+    "payments": "Payments",
+    "paymentsText": "Invoices for services will be issued through InvoiceNinja, and payments can be made via Stripe or PayPal. By making a payment through one of these platforms, you also agree to the terms and conditions of Stripe and PayPal. L252 Media Production does not store payment information and is not responsible for any issues arising from the use of these payment processors.",
+    "refundPolicy": "Refund Policy",
+    "refundPolicyText": "We offer refunds for payments made within 15 days of the invoice date. Refunds will only be issued if the service has not commenced or if there is a mutual agreement. Please contact us within this timeframe to request a refund.",
+    "clientResponsibilities": "Client Responsibilities",
+    "clientResponsibilitiesText": "You are responsible for providing accurate information when engaging our services and for timely communication. Failure to provide necessary information or cooperation may result in delays or additional costs.",
+    "limitationOfLiability": "Limitation of Liability",
+    "limitationOfLiabilityText": "To the fullest extent permitted by law, L252 Media Production shall not be liable for any indirect, incidental, or consequential damages arising from your use of our services or website. Our total liability to you for any claim shall not exceed the amount paid for the services provided.",
+    "intellectualProperty": "Intellectual Property",
+    "intellectualPropertyText": "All content on this website, including text, images, and branding, is the intellectual property of L252 Media Production and may not be used without our permission.",
+    "modifications": "Modifications to Services",
+    "modificationsText": "We reserve the right to modify or discontinue our services at any time, with or without notice.",
+    "governingLaw": "Governing Law",
+    "governingLawText": "These terms are governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law principles."
+  }
+}

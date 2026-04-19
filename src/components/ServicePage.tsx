@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 interface ServicePageProps {
@@ -16,8 +17,10 @@ export default function ServicePage({
   description,
   highlights,
   heroImage,
-  ctaText = "Ready to get started?",
+  ctaText,
 }: ServicePageProps) {
+  const t = useTranslations("ServicePage");
+
   return (
     <>
       {/* Hero */}
@@ -39,7 +42,7 @@ export default function ServicePage({
         )}
         <div className="relative max-w-3xl mx-auto text-center">
           <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Our Services
+            {t("ourServices")}
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-5">{title}</h1>
           <p className="text-slate-300 text-lg">{tagline}</p>
@@ -56,7 +59,7 @@ export default function ServicePage({
       {/* Highlights */}
       <section className="py-16 px-4 bg-slate-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-slate-900 mb-10 text-center">What&apos;s Included</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-10 text-center">{t("whatsIncluded")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {highlights.map((item) => (
               <div key={item.heading} className="p-6 bg-white rounded-xl border border-slate-200">
@@ -79,15 +82,13 @@ export default function ServicePage({
           className="absolute right-8 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none select-none hidden sm:block"
         />
         <div className="relative">
-          <h2 className="text-2xl font-bold mb-4">{ctaText}</h2>
-          <p className="text-blue-100 mb-8 max-w-lg mx-auto">
-            Contact us to discuss your project. We&apos;ll put together a custom solution that fits your needs and budget.
-          </p>
+          <h2 className="text-2xl font-bold mb-4">{ctaText ?? t("ourServices")}</h2>
+          <p className="text-blue-100 mb-8 max-w-lg mx-auto">{t("ctaDescription")}</p>
           <Link
             href="/contact"
             className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-md hover:bg-blue-50 transition-colors"
           >
-            Get a Free Quote
+            {t("getAFreeQuote")}
           </Link>
         </div>
       </section>

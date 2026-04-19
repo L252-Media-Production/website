@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 const social = [
@@ -32,6 +33,8 @@ const social = [
 ];
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-slate-900 text-slate-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -46,9 +49,7 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="text-sm text-slate-400 mb-5">
-              Expert AV Solutions with IT Support You Can Trust — serving churches and businesses.
-            </p>
+            <p className="text-sm text-slate-400 mb-5">{t("tagline")}</p>
             <div className="flex items-center gap-3">
               {social.map((s) => (
                 <a
@@ -66,32 +67,32 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-3">Services</h3>
+            <h3 className="text-white font-semibold mb-3">{t("servicesHeading")}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services/av-installation" className="hover:text-white transition-colors">AV Installation</Link></li>
-              <li><Link href="/services/event-production" className="hover:text-white transition-colors">Event Production</Link></li>
-              <li><Link href="/services/it-network" className="hover:text-white transition-colors">IT & Network</Link></li>
-              <li><Link href="/services/training" className="hover:text-white transition-colors">Training</Link></li>
+              <li><Link href="/services/av-installation" className="hover:text-white transition-colors">{t("avInstallation")}</Link></li>
+              <li><Link href="/services/event-production" className="hover:text-white transition-colors">{t("eventProduction")}</Link></li>
+              <li><Link href="/services/it-network" className="hover:text-white transition-colors">{t("itNetwork")}</Link></li>
+              <li><Link href="/services/training" className="hover:text-white transition-colors">{t("training")}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-3">Company</h3>
+            <h3 className="text-white font-semibold mb-3">{t("companyHeading")}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Get a Quote</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">{t("aboutUs")}</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">{t("contact")}</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">{t("getAQuote")}</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-slate-700 text-sm text-slate-500">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-4">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">{t("privacyPolicy")}</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">{t("termsOfService")}</Link>
           </div>
           <div className="text-center">
-            © {new Date().getFullYear()} L252 Media Production. All rights reserved.
+            {t("copyright", { year: new Date().getFullYear() })}
           </div>
         </div>
       </div>

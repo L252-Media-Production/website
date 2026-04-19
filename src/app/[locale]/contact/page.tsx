@@ -1,15 +1,25 @@
+import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Contact | L252 Media Production",
-  description:
-    "Get in touch with L252 Media Production for a free quote on AV installation, event production, IT & network, or training services.",
-};
+export async function generateMetadata({ params }: PageProps<"/[locale]/contact">) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Contact" });
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
+
+export default async function ContactPage({ params }: PageProps<"/[locale]/contact">) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <ContactPageContent />;
+}
 
 const social = [
   {
-    label: "Facebook",
+    key: "Facebook",
     href: "https://www.facebook.com/l252mp",
     handle: "@l252mp",
     icon: (
@@ -19,7 +29,7 @@ const social = [
     ),
   },
   {
-    label: "Instagram",
+    key: "Instagram",
     href: "https://instagram.com/l252media",
     handle: "@l252media",
     icon: (
@@ -29,7 +39,7 @@ const social = [
     ),
   },
   {
-    label: "WhatsApp",
+    key: "WhatsApp",
     href: "https://wa.me/12122874260",
     handle: "+1 (212) 287-4260",
     icon: (
@@ -40,25 +50,23 @@ const social = [
   },
 ];
 
-export default function ContactPage() {
+function ContactPageContent() {
+  const t = useTranslations("Contact");
+
   return (
     <>
       <section className="bg-slate-900 text-white py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Get in Touch
+            {t("badge")}
           </p>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-5">Contact Us</h1>
-          <p className="text-slate-300 text-lg">
-            Tell us about your project. We&apos;ll get back to you with a customized solution and a free quote.
-          </p>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-5">{t("heroTitle")}</h1>
+          <p className="text-slate-300 text-lg">{t("heroSubtitle")}</p>
         </div>
       </section>
 
       <section className="py-20 px-4 bg-white">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
-
-          {/* Left sidebar */}
           <div className="lg:col-span-2 flex flex-col gap-8">
             <Image
               src="/images/logo-blue.png"
@@ -69,17 +77,17 @@ export default function ContactPage() {
             />
 
             <div>
-              <h2 className="text-lg font-semibold text-slate-900 mb-2">Let&apos;s work together</h2>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                Whether you&apos;re planning a full AV installation, need help with an upcoming event, or just want to explore your options — we&apos;re here to help. Fill out the form or reach us directly through any of the channels below.
-              </p>
+              <h2 className="text-lg font-semibold text-slate-900 mb-2">{t("letsWorkTogether")}</h2>
+              <p className="text-slate-500 text-sm leading-relaxed">{t("sidebarDesc")}</p>
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-slate-700 uppercase tracking-widest mb-4">Follow Us</h3>
+              <h3 className="text-sm font-semibold text-slate-700 uppercase tracking-widest mb-4">
+                {t("followUs")}
+              </h3>
               <ul className="space-y-3">
                 {social.map((s) => (
-                  <li key={s.label}>
+                  <li key={s.key}>
                     <a
                       href={s.href}
                       target="_blank"
@@ -89,7 +97,7 @@ export default function ContactPage() {
                       <span className="text-slate-400 group-hover:text-blue-500 transition-colors">
                         {s.icon}
                       </span>
-                      <span className="text-sm font-medium">{s.label}</span>
+                      <span className="text-sm font-medium">{s.key}</span>
                       <span className="text-sm text-slate-400">{s.handle}</span>
                     </a>
                   </li>
@@ -98,91 +106,90 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Form */}
           <div className="lg:col-span-3">
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-1">
-                    First Name
+                    {t("firstName")}
                   </label>
                   <input
                     type="text"
                     id="firstName"
                     name="firstName"
                     className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Jane"
+                    placeholder={t("firstNamePlaceholder")}
                   />
                 </div>
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 mb-1">
-                    Last Name
+                    {t("lastName")}
                   </label>
                   <input
                     type="text"
                     id="lastName"
                     name="lastName"
                     className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Smith"
+                    placeholder={t("lastNamePlaceholder")}
                   />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
-                  Email Address
+                  {t("emailAddress")}
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="jane@yourorganization.com"
+                  placeholder={t("emailPlaceholder")}
                 />
               </div>
 
               <div>
                 <label htmlFor="organization" className="block text-sm font-medium text-slate-700 mb-1">
-                  Organization / Church Name
+                  {t("organization")}
                 </label>
                 <input
                   type="text"
                   id="organization"
                   name="organization"
                   className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your church or business"
+                  placeholder={t("organizationPlaceholder")}
                 />
               </div>
 
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-slate-700 mb-1">
-                  Service Interest
+                  {t("serviceInterest")}
                 </label>
                 <select
                   id="service"
                   name="service"
                   className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  <option value="">Select a service...</option>
-                  <option value="av-installation">AV Installation</option>
-                  <option value="event-production">Event Production</option>
-                  <option value="it-network">IT & Network</option>
-                  <option value="training">Training</option>
-                  <option value="multiple">Multiple Services</option>
-                  <option value="unsure">Not Sure Yet</option>
+                  <option value="">{t("selectService")}</option>
+                  <option value="av-installation">{t("avInstallation")}</option>
+                  <option value="event-production">{t("eventProduction")}</option>
+                  <option value="it-network">{t("itNetwork")}</option>
+                  <option value="training">{t("training")}</option>
+                  <option value="multiple">{t("multipleServices")}</option>
+                  <option value="unsure">{t("notSureYet")}</option>
                 </select>
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
-                  Tell us about your project
+                  {t("projectMessage")}
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={5}
                   className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder="Describe your space, goals, current setup, and any specific needs..."
+                  placeholder={t("projectPlaceholder")}
                 />
               </div>
 
@@ -190,7 +197,7 @@ export default function ContactPage() {
                 type="submit"
                 className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-md transition-colors"
               >
-                Send Message
+                {t("sendMessage")}
               </button>
             </form>
           </div>
