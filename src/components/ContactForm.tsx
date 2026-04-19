@@ -1,29 +1,24 @@
 "use client";
 
-import { useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useState } from "react";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useTranslations } from "next-intl";
 
-export default function ContactForm() {
+function ContactFormInner() {
   const t = useTranslations("Contact");
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    const token = recaptchaRef.current?.getValue();
-    if (!token) {
-      setErrorMsg(t("recaptchaError"));
-      return;
-    }
-
-    setStatus("loading");
-    setErrorMsg(null);
+    if (!executeRecaptcha) return;
 
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
+
+    const token = await executeRecaptcha("contact_form");
+    setStatus("loading");
 
     const res = await fetch("/api/contact", {
       method: "POST",
@@ -34,10 +29,8 @@ export default function ContactForm() {
     if (res.ok) {
       setStatus("success");
       form.reset();
-      recaptchaRef.current?.reset();
     } else {
       setStatus("error");
-      recaptchaRef.current?.reset();
     }
   }
 
@@ -144,15 +137,6 @@ export default function ContactForm() {
         />
       </div>
 
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
-      />
-
-      {errorMsg && (
-        <p className="text-sm text-red-600">{errorMsg}</p>
-      )}
-
       {status === "error" && (
         <div className="rounded-md border border-red-200 bg-red-50 p-4">
           <p className="text-sm font-semibold text-red-800">{t("errorTitle")}</p>
@@ -168,5 +152,13 @@ export default function ContactForm() {
         {status === "loading" ? t("sending") : t("sendMessage")}
       </button>
     </form>
+  );
+}
+
+export default function ContactForm() {
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}>
+      <ContactFormInner />
+    </GoogleReCaptchaProvider>
   );
 }

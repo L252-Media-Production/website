@@ -183,8 +183,7 @@
     "successTitle": "Thank you for your message!",
     "successBody": "We've received your inquiry and will reach out to you soon. Check your inbox for a confirmation email.",
     "errorTitle": "Something went wrong.",
-    "errorBody": "Your message couldn't be sent. Please try again or email us directly at contact@twomediapros.com.",
-    "recaptchaError": "Please complete the reCAPTCHA verification."
+    "errorBody": "Your message couldn't be sent. Please try again or email us directly at contact@twomediapros.com."
   },
   "Services": {
     "meta": {

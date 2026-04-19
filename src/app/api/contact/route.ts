@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
   });
   const recaptchaData = await recaptchaRes.json();
-  if (!recaptchaData.success) {
+  if (!recaptchaData.success || recaptchaData.score < 0.5) {
     return NextResponse.json({ error: "reCAPTCHA verification failed" }, { status: 400 });
   }
 
