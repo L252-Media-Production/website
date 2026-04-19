@@ -39,6 +39,7 @@ export default function TrainingPage() {
           body: "Training sessions tailored to your team's current skill level, your specific equipment, and your schedule.",
         },
       ]}
+      heroImage="/images/training.jpg"
       ctaText="Empower your team to operate with confidence."
     />
   );

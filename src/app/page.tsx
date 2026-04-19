@@ -13,7 +13,7 @@ const services = [
   {
     title: "Event Production",
     href: "/services/event-production",
-    icon: null,
+    icon: "🎙️",
     image: "/images/event-production.jpg",
     description:
       "Professional sound, lighting, and visuals for worship concerts, conferences, and special celebrations — seamless and impactful from start to finish.",
@@ -30,7 +30,7 @@ const services = [
     title: "Training",
     href: "/services/training",
     icon: "🎓",
-    image: null,
+    image: "/images/training.jpg",
     description:
       "Hands-on training in audio, projection, and livestreaming. We break down complex concepts into practical steps so you can operate confidently and independently.",
   },
