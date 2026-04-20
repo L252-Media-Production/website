@@ -94,10 +94,16 @@ export default function Nav() {
 
             <button
               onClick={toggleLocale}
-              className="px-3 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white border border-slate-600 hover:border-slate-400 transition-colors ml-1"
+              className="ml-1 rounded-md overflow-hidden border border-slate-600 hover:border-slate-400 transition-colors focus:outline-none"
               aria-label="Switch language"
             >
-              {t("switchLang")}
+              <Image
+                src={locale === "en" ? "/images/spanish.svg" : "/images/english.svg"}
+                alt={locale === "en" ? "Español" : "English"}
+                width={32}
+                height={24}
+                className="block"
+              />
             </button>
 
             <Link
@@ -112,10 +118,16 @@ export default function Nav() {
           <div className="md:hidden flex items-center gap-1">
             <button
               onClick={toggleLocale}
-              className="px-3 py-1.5 rounded-md text-xs font-semibold text-slate-300 hover:text-white border border-slate-600 hover:border-slate-400 transition-colors"
+              className="rounded-md overflow-hidden border border-slate-600 hover:border-slate-400 transition-colors focus:outline-none"
               aria-label="Switch language"
             >
-              {t("switchLang")}
+              <Image
+                src={locale === "en" ? "/images/spanish.svg" : "/images/english.svg"}
+                alt={locale === "en" ? "Español" : "English"}
+                width={32}
+                height={24}
+                className="block"
+              />
             </button>
 
             <button
