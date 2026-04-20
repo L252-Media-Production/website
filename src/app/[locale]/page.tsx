@@ -19,7 +19,7 @@ const serviceHrefs = [
   "/services/training",
 ];
 
-const serviceImages = [null, "/images/event-production.jpg", null, "/images/training.jpg"];
+const serviceImages = [null, "/images/event-production.jpg", "/images/it-network.jpg", "/images/training.jpg"];
 const serviceIcons = ["📽️", "🎙️", "🌐", "🎓"];
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {

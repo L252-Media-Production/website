@@ -183,7 +183,7 @@
     "successTitle": "Thank you for your message!",
     "successBody": "We've received your inquiry and will reach out to you soon. Check your inbox for a confirmation email.",
     "errorTitle": "Something went wrong.",
-    "errorBody": "Your message couldn't be sent. Please try again or email us directly at contact@twomediapros.com."
+    "errorBody": "Your message couldn't be sent. Please try again or email us directly at info@twomediapros.com."
   },
   "Services": {
     "meta": {
@@ -312,7 +312,7 @@
       },
       {
         "heading": "Structured Cabling",
-        "body": "Professional Cat6/fiber installation with clean cable management, labeling, and documentation for easy future maintenance."
+        "body": "Professional CAT6 installation with clean cable management, labeling, and documentation for easy future maintenance."
       },
       {
         "heading": "Network Hardware & Routing",

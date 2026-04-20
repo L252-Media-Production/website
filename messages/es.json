@@ -181,9 +181,9 @@
     "sendMessage": "Enviar Mensaje",
     "sending": "Enviando...",
     "successTitle": "¡Gracias por su mensaje!",
-    "successBody": "Hemos recibido su consulta y nos pondremos en contacto con usted pronto. Revise su bandeja de entrada para ver el correo de confirmación.",
+    "successBody": "Hemos recibido su solicitud y nos pondremos en contacto con usted pronto. Revise su bandeja de entrada para ver el correo de confirmación.",
     "errorTitle": "Algo salió mal.",
-    "errorBody": "No se pudo enviar su mensaje. Inténtelo de nuevo o escríbanos directamente a contact@twomediapros.com."
+    "errorBody": "No se pudo enviar su mensaje. Inténtelo de nuevo o escríbanos directamente a info@twomediapros.com."
   },
   "Services": {
     "meta": {
@@ -192,7 +192,7 @@
     },
     "badge": "L252 Media Production",
     "heroTitle": "Nuestros Servicios",
-    "heroSubtitle": "Soluciones AV y TI integrales para iglesias y empresas — diseñadas, instaladas y respaldadas por nuestro equipo.",
+    "heroSubtitle": "Soluciones AV e Informática integrales para iglesias y empresas — diseñadas, instaladas y respaldadas por nuestro equipo.",
     "learnMore": "Más información →",
     "ctaTitle": "¿No sabe por dónde empezar?",
     "ctaSubtitle": "Comuníquese y cuéntenos sobre sus objetivos. Le ayudaremos a encontrar la solución correcta.",
@@ -312,7 +312,7 @@
       },
       {
         "heading": "Cableado Estructurado",
-        "body": "Instalación profesional de Cat6/fibra con gestión de cables limpia, etiquetado y documentación para un mantenimiento futuro sencillo."
+        "body": "Instalación profesional de CAT6 con gestión de cables limpia, etiquetado y documentación para un mantenimiento futuro sencillo."
       },
       {
         "heading": "Hardware de Red y Enrutamiento",

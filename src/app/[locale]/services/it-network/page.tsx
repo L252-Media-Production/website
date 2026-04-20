@@ -27,6 +27,7 @@ function ITNetworkPageContent() {
       tagline={t("tagline")}
       description={t("description")}
       highlights={highlights}
+      heroImage="/images/it-network.jpg"
       ctaText={t("ctaText")}
     />
   );
