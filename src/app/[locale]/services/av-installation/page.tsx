@@ -27,6 +27,7 @@ function AVInstallationPageContent() {
       tagline={t("tagline")}
       description={t("description")}
       highlights={highlights}
+      heroImage="/images/av-installation.jpg"
       ctaText={t("ctaText")}
     />
   );
