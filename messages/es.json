@@ -42,7 +42,7 @@
     "getAFreeQuote": "Obtener Cotización Gratis",
     "ourServices": "Nuestros Servicios",
     "whatWeDo": "Lo Que Hacemos",
-    "whatWeDoSubtitle": "Desde la planificación hasta la instalación y el soporte continuo, ofrecemos soluciones AV y TI integrales adaptadas a su espacio y objetivos.",
+    "whatWeDoSubtitle": "Desde la planificación hasta la instalación y el soporte continuo, ofrecemos soluciones AV e informática integrales adaptadas a su espacio y objetivos.",
     "viewAllServices": "Ver todos los servicios →",
     "whyL252": "¿Por qué L252?",
     "whyL252Subtitle": "Combinamos experiencia técnica con un compromiso de servir a las organizaciones y comunidades que importan.",
@@ -85,7 +85,7 @@
   "About": {
     "meta": {
       "title": "Sobre Nosotros | L252 Media Production",
-      "description": "Conozca a los fundadores de L252 Media Production — Emmanuel Acosta y Jancarlos Reyes — y descubra por qué nos apasiona servir a iglesias y empresas con soluciones AV y TI expertas."
+      "description": "Conozca a los fundadores de L252 Media Production — Emmanuel Acosta y Jancarlos Reyes — y descubra por qué nos apasiona servir a iglesias y empresas con soluciones AV e informática expertas."
     },
     "badge": "Quiénes Somos",
     "heroTitle": "Sobre L252 Media Production",
@@ -94,7 +94,7 @@
     "intro2": "Nuestro equipo tiene experiencia práctica en instalación audiovisual, producción de eventos en vivo, infraestructura TI y capacitación técnica. Hemos trabajado en entornos que van desde pequeñas iglesias comunitarias hasta eventos empresariales a gran escala, y aportamos el mismo nivel de cuidado y profesionalismo a cada proyecto.",
     "intro3": "Lo que nos distingue es nuestro compromiso con las personas a quienes servimos. No solo instalamos equipos y desaparecemos. Nos tomamos el tiempo de entender su espacio, su equipo y sus objetivos — y nos mantenemos involucrados para asegurarnos de que todo funcione como debe, mucho después de que el proyecto esté terminado.",
     "foundersHeading": "Conozca a los Fundadores",
-    "foundersSubtitle": "L252 está liderado por dos profesionales cuya experiencia combinada abarca todo el espectro de la producción de medios y TI — unidos por un compromiso compartido de servir bien a las personas.",
+    "foundersSubtitle": "L252 está liderado por dos profesionales cuya experiencia combinada abarca todo el espectro de la producción de medios e informática — unidos por un compromiso compartido de servir bien a las personas.",
     "founders": [
       {
         "role": "Co-Fundador",
@@ -404,7 +404,7 @@
     "lastUpdated": "Última actualización: {year}",
     "intro": "Estos términos rigen el uso del sitio web y los servicios de L252 Media Production.",
     "servicesProvided": "Servicios Proporcionados",
-    "servicesProvidedText": "L252 Media Production se especializa en instalaciones AV y TI/Redes. Todos los servicios proporcionados están sujetos a estos términos.",
+    "servicesProvidedText": "L252 Media Production se especializa en instalaciones AV e Informática/Redes. Todos los servicios proporcionados están sujetos a estos términos.",
     "payments": "Pagos",
     "paymentsText": "Las facturas por servicios se emitirán a través de InvoiceNinja, y los pagos se pueden realizar mediante Stripe o PayPal. Al realizar un pago a través de una de estas plataformas, también acepta los términos y condiciones de Stripe y PayPal. L252 Media Production no almacena información de pago y no es responsable de ningún problema que surja del uso de estos procesadores de pago.",
     "refundPolicy": "Política de Reembolso",
