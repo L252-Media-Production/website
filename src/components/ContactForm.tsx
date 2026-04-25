@@ -48,6 +48,8 @@ function ContactFormInner() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Honeypot: hidden from real users, bots fill it in */}
+      <input type="text" name="website" tabIndex={-1} aria-hidden="true" autoComplete="off" style={{ display: "none" }} />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-1">
