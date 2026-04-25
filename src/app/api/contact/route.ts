@@ -1,14 +1,70 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 import { Resend } from "resend";
+
+const ratelimit = new Ratelimit({
+  redis: Redis.fromEnv(),
+  limiter: Ratelimit.slidingWindow(5, "10 m"),
+  analytics: true,
+});
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const ALLOWED_SERVICES = new Set(["av-installation", "event-production", "it-network", "training", "multiple", "unsure", ""]);
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
 export async function POST(request: NextRequest) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
+  const { success } = await ratelimit.limit(ip);
+  if (!success) {
+    return NextResponse.json({ error: "Too many requests. Please try again later." }, { status: 429 });
+  }
+
   const body = await request.json();
   const { firstName, lastName, email, organization, service, message, recaptchaToken } = body;
 
-  if (!firstName || !lastName || !email || !message) {
+  if (!firstName || !lastName || !email || !message || !recaptchaToken) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+  }
+
+  if (
+    typeof firstName !== "string" ||
+    typeof lastName !== "string" ||
+    typeof email !== "string" ||
+    typeof message !== "string" ||
+    typeof recaptchaToken !== "string" ||
+    (organization !== undefined && typeof organization !== "string") ||
+    (service !== undefined && typeof service !== "string")
+  ) {
+    return NextResponse.json({ error: "Invalid field types" }, { status: 400 });
+  }
+
+  if (
+    firstName.length > 50 ||
+    lastName.length > 50 ||
+    email.length > 254 ||
+    (organization && organization.length > 100) ||
+    message.length > 5000
+  ) {
+    return NextResponse.json({ error: "Field exceeds maximum length" }, { status: 400 });
+  }
+
+  if (!EMAIL_REGEX.test(email)) {
+    return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+  }
+
+  if (service !== undefined && !ALLOWED_SERVICES.has(service)) {
+    return NextResponse.json({ error: "Invalid service selection" }, { status: 400 });
   }
 
   // Verify reCAPTCHA
@@ -18,33 +74,40 @@ export async function POST(request: NextRequest) {
     body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
   });
   const recaptchaData = await recaptchaRes.json();
-  if (!recaptchaData.success || recaptchaData.score < 0.5) {
+  if (!recaptchaData.success || recaptchaData.score < 0.5 || recaptchaData.action !== "contact_form") {
     return NextResponse.json({ error: "reCAPTCHA verification failed" }, { status: 400 });
   }
 
-  const subject = organization
-    ? `New Contact Request from ${organization}`
-    : `New Contact Request from ${firstName} ${lastName}`;
+  const safeFirst = escapeHtml(firstName.trim());
+  const safeLast = escapeHtml(lastName.trim());
+  const safeEmail = escapeHtml(email.trim());
+  const safeOrg = organization ? escapeHtml(organization.trim()) : "";
+  const safeService = service ? escapeHtml(service.trim()) : "";
+  const safeMessage = escapeHtml(message.trim());
+
+  const subject = safeOrg
+    ? `New Contact Request from ${safeOrg}`
+    : `New Contact Request from ${safeFirst} ${safeLast}`;
 
   const internalHtml = `
     <h2>${subject}</h2>
-    <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    ${organization ? `<p><strong>Organization:</strong> ${organization}</p>` : ""}
-    ${service ? `<p><strong>Service Interest:</strong> ${service}</p>` : ""}
+    <p><strong>Name:</strong> ${safeFirst} ${safeLast}</p>
+    <p><strong>Email:</strong> ${safeEmail}</p>
+    ${safeOrg ? `<p><strong>Organization:</strong> ${safeOrg}</p>` : ""}
+    ${safeService ? `<p><strong>Service Interest:</strong> ${safeService}</p>` : ""}
     <p><strong>Message:</strong></p>
-    <p style="white-space:pre-wrap">${message}</p>
+    <p style="white-space:pre-wrap">${safeMessage}</p>
   `;
 
   const confirmationHtml = `
-    <p>Hi ${firstName},</p>
+    <p>Hi ${safeFirst},</p>
     <p>Thank you for reaching out to L252 Media Production! We've received your message and will get back to you within 1–2 business days.</p>
     <p>Here's a copy of what you sent us:</p>
     <blockquote style="border-left:3px solid #e2e8f0;margin:16px 0;padding:12px 16px;color:#475569">
-      ${organization ? `<p><strong>Organization:</strong> ${organization}</p>` : ""}
-      ${service ? `<p><strong>Service Interest:</strong> ${service}</p>` : ""}
+      ${safeOrg ? `<p><strong>Organization:</strong> ${safeOrg}</p>` : ""}
+      ${safeService ? `<p><strong>Service Interest:</strong> ${safeService}</p>` : ""}
       <p><strong>Message:</strong></p>
-      <p style="white-space:pre-wrap">${message}</p>
+      <p style="white-space:pre-wrap">${safeMessage}</p>
     </blockquote>
     <p>In the meantime, feel free to follow us on social media or visit our website at <a href="https://l252mp.com">l252mp.com</a>.</p>
     <p>— The L252 Media Production Team</p>

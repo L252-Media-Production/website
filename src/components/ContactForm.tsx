@@ -58,6 +58,7 @@ function ContactFormInner() {
             type="text"
             id="firstName"
             name="firstName"
+            maxLength={50}
             className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder={t("firstNamePlaceholder")}
           />
@@ -71,6 +72,7 @@ function ContactFormInner() {
             type="text"
             id="lastName"
             name="lastName"
+            maxLength={50}
             className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder={t("lastNamePlaceholder")}
           />
@@ -99,6 +101,7 @@ function ContactFormInner() {
           type="text"
           id="organization"
           name="organization"
+          maxLength={100}
           className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           placeholder={t("organizationPlaceholder")}
         />
@@ -132,6 +135,7 @@ function ContactFormInner() {
           id="message"
           name="message"
           rows={5}
+          maxLength={5000}
           className="w-full px-4 py-2.5 border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
           placeholder={t("projectPlaceholder")}
         />
