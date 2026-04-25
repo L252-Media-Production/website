@@ -3,7 +3,12 @@
 import Image from "next/image";
 import { usePathname, useRouter, Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+
+const LOCALES = [
+  { code: "en", label: "English", flag: "/images/english.svg" },
+  { code: "es", label: "Español", flag: "/images/spanish.svg" },
+] as const;
 
 export default function Nav() {
   const t = useTranslations("Nav");
@@ -12,6 +17,30 @@ export default function Nav() {
   const locale = useLocale();
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langDesktopRef = useRef<HTMLDivElement>(null);
+  const langMobileRef = useRef<HTMLDivElement>(null);
+
+  const currentLocale = LOCALES.find((l) => l.code === locale) ?? LOCALES[0];
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      const target = e.target as Node;
+      if (
+        !langDesktopRef.current?.contains(target) &&
+        !langMobileRef.current?.contains(target)
+      ) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  function switchLocale(code: string) {
+    router.replace(pathname, { locale: code });
+    setLangOpen(false);
+  }
 
   const services = [
     { label: t("avInstallation"), href: "/services/av-installation" as const },
@@ -19,10 +48,6 @@ export default function Nav() {
     { label: t("itNetwork"), href: "/services/it-network" as const },
     { label: t("training"), href: "/services/training" as const },
   ];
-
-  function toggleLocale() {
-    router.replace(pathname, { locale: locale === "en" ? "es" : "en" });
-  }
 
   return (
     <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
@@ -92,19 +117,35 @@ export default function Nav() {
               {t("clientPortal")}
             </a>
 
-            <button
-              onClick={toggleLocale}
-              className="ml-1 rounded-md overflow-hidden border border-slate-600 hover:border-slate-400 transition-colors focus:outline-none"
-              aria-label="Switch language"
-            >
-              <Image
-                src={locale === "en" ? "/images/spanish.svg" : "/images/english.svg"}
-                alt={locale === "en" ? "Español" : "English"}
-                width={32}
-                height={24}
-                className="block"
-              />
-            </button>
+            <div ref={langDesktopRef} className="relative ml-1">
+              <button
+                onClick={() => setLangOpen((o) => !o)}
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white text-sm font-medium transition-colors focus:outline-none"
+                aria-label="Select language"
+              >
+                <Image src={currentLocale.flag} alt={currentLocale.label} width={20} height={15} className="block rounded-sm" />
+                <span>{currentLocale.code.toUpperCase()}</span>
+                <svg className={`w-3 h-3 transition-transform ${langOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 w-36 bg-slate-800 rounded-md shadow-xl overflow-hidden">
+                  {LOCALES.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => switchLocale(l.code)}
+                      className={`w-full flex items-center gap-2.5 px-3 py-2.5 text-sm transition-colors ${
+                        l.code === locale ? "text-white bg-slate-700" : "text-slate-300 hover:text-white hover:bg-slate-700"
+                      }`}
+                    >
+                      <Image src={l.flag} alt={l.label} width={20} height={15} className="block rounded-sm" />
+                      {l.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               href="/contact"
@@ -116,19 +157,35 @@ export default function Nav() {
 
           {/* Mobile right controls */}
           <div className="md:hidden flex items-center gap-1">
-            <button
-              onClick={toggleLocale}
-              className="rounded-md overflow-hidden border border-slate-600 hover:border-slate-400 transition-colors focus:outline-none"
-              aria-label="Switch language"
-            >
-              <Image
-                src={locale === "en" ? "/images/spanish.svg" : "/images/english.svg"}
-                alt={locale === "en" ? "Español" : "English"}
-                width={32}
-                height={24}
-                className="block"
-              />
-            </button>
+            <div ref={langMobileRef} className="relative">
+              <button
+                onClick={() => setLangOpen((o) => !o)}
+                className="flex items-center gap-1 px-2 py-1.5 rounded-md border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white text-sm font-medium transition-colors focus:outline-none"
+                aria-label="Select language"
+              >
+                <Image src={currentLocale.flag} alt={currentLocale.label} width={20} height={15} className="block rounded-sm" />
+                <span>{currentLocale.code.toUpperCase()}</span>
+                <svg className={`w-3 h-3 transition-transform ${langOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 w-36 bg-slate-800 rounded-md shadow-xl overflow-hidden z-10">
+                  {LOCALES.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => switchLocale(l.code)}
+                      className={`w-full flex items-center gap-2.5 px-3 py-2.5 text-sm transition-colors ${
+                        l.code === locale ? "text-white bg-slate-700" : "text-slate-300 hover:text-white hover:bg-slate-700"
+                      }`}
+                    >
+                      <Image src={l.flag} alt={l.label} width={20} height={15} className="block rounded-sm" />
+                      {l.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <button
               className="p-2 rounded-md text-slate-300 hover:text-white"
