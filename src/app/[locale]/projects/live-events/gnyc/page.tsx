@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import ProjectCard from "@/components/ProjectCard";
@@ -7,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "Projects" });
   return {
     title: `Greater New York Conference Youth Department | ${t("liveEvents.heroTitle")} | L252 Media Production`,
-    description: "Live event production for Greater New York Conference Youth Department events.",
+    description: t("gnyc.metaDescription"),
   };
 }
 
@@ -31,6 +32,8 @@ const PROJECTS = [
 ];
 
 function GNYCProjectsContent() {
+  const t = useTranslations("Projects");
+
   return (
     <>
       <section className="bg-slate-900 text-white py-20 px-4">
@@ -39,13 +42,13 @@ function GNYCProjectsContent() {
             href="/projects/live-events"
             className="inline-block text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors mb-6"
           >
-            ← Back to Live Events
+            {t("backToLiveEvents")}
           </Link>
           <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Client
+            {t("clientLabel")}
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-5">Greater New York Conference Youth Department</h1>
-          <p className="text-slate-300 text-lg">Live event production across multiple annual events.</p>
+          <p className="text-slate-300 text-lg">{t("gnyc.heroSubtitle")}</p>
         </div>
       </section>
 

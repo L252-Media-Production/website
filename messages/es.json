@@ -376,6 +376,12 @@
     "viewProjects": "Ver Proyectos →",
     "viewOnGitHub": "Ver en GitHub →",
     "backToProjects": "← Todos los Proyectos",
+    "backToLiveEvents": "← Volver a Eventos en Vivo",
+    "clientLabel": "Cliente",
+    "gnyc": {
+      "metaDescription": "Producción de eventos en vivo para los eventos del Departamento Juvenil de la Conferencia del Gran Nueva York.",
+      "heroSubtitle": "Producción de eventos en vivo para múltiples eventos anuales."
+    },
     "avInstallation": {
       "label": "Instalación AV",
       "description": "Sistemas audiovisuales personalizados diseñados e instalados para un impacto duradero.",

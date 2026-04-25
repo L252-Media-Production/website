@@ -26,7 +26,7 @@ const PROJECTS = [
   },
   {
     name: "Fort Washington Spanish",
-    logo: "/images/sda-logo.png",
+    logo: "/images/fwsda-logo.png",
     description: undefined,
   },
   {

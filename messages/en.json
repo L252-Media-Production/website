@@ -376,6 +376,12 @@
     "viewProjects": "View Projects →",
     "viewOnGitHub": "View on GitHub →",
     "backToProjects": "← All Projects",
+    "backToLiveEvents": "← Back to Live Events",
+    "clientLabel": "Client",
+    "gnyc": {
+      "metaDescription": "Live event production for Greater New York Conference Youth Department events.",
+      "heroSubtitle": "Live event production across multiple annual events."
+    },
     "avInstallation": {
       "label": "AV Installation",
       "description": "Custom audio-visual systems designed and installed for lasting impact.",
