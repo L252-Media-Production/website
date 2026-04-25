@@ -13,7 +13,8 @@
       "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/av-installation\")",
       "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/event-production\")",
       "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/it-network\")",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)\\)\")"
     ]
   }
 }

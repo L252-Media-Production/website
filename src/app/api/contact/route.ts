@@ -139,7 +139,7 @@ export async function POST(request: NextRequest) {
       <p><strong>Message:</strong></p>
       <p style="white-space:pre-wrap">${safeMessage}</p>
     </blockquote>
-    <p>In the meantime, feel free to follow us on social media or visit our website at <a href="https://l252mp.com">l252mp.com</a>.</p>
+    <p>In the meantime, feel free to follow us on social media or visit our website at <a href="https://twomediapros.com.com">twomediapros.com</a>.</p>
     <p>— The L252 Media Production Team</p>
   `;
 

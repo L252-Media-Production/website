@@ -100,6 +100,15 @@ export default function Nav() {
             </div>
 
             <Link
+              href="/projects"
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                pathname.startsWith("/projects") ? "text-blue-400" : "text-slate-300 hover:text-white"
+              }`}
+            >
+              {t("projects")}
+            </Link>
+
+            <Link
               href="/about"
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 pathname === "/about" ? "text-blue-400" : "text-slate-300 hover:text-white"
@@ -227,6 +236,9 @@ export default function Nav() {
                 ))}
               </div>
             )}
+            <Link href="/projects" className="block px-3 py-2 text-sm text-slate-300 hover:text-white" onClick={() => setMenuOpen(false)}>
+              {t("projects")}
+            </Link>
             <Link href="/about" className="block px-3 py-2 text-sm text-slate-300 hover:text-white" onClick={() => setMenuOpen(false)}>
               {t("about")}
             </Link>

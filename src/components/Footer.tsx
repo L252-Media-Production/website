@@ -89,7 +89,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-3">{t("companyHeading")}</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors">{t("aboutUs")}</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">{t("contact")}</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors">{t("projects")}</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">{t("getAQuote")}</Link></li>
             </ul>
           </div>

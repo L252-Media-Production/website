@@ -6,6 +6,7 @@
     "eventProduction": "Producción de Eventos",
     "itNetwork": "Informática y Redes",
     "training": "Capacitación",
+    "projects": "Proyectos",
     "about": "Nosotros",
     "clientPortal": "Portal del Cliente",
     "contactUs": "Contáctenos"
@@ -18,6 +19,7 @@
     "eventProduction": "Producción de Eventos",
     "itNetwork": "Informática y Redes",
     "training": "Capacitación",
+    "projects": "Proyectos",
     "aboutUs": "Sobre Nosotros",
     "contact": "Contacto",
     "getAQuote": "Obtener Cotización",
@@ -362,6 +364,36 @@
         "body": "Sesiones de capacitación adaptadas al nivel de habilidad actual de su equipo, su equipo específico y su horario."
       }
     ]
+  },
+  "Projects": {
+    "meta": {
+      "title": "Proyectos | L252 Media Production",
+      "description": "Un vistazo a algunas de las organizaciones y eventos que hemos tenido el privilegio de servir — instalaciones AV, eventos en vivo y proyectos de informática."
+    },
+    "badge": "Nuestro Trabajo",
+    "heroTitle": "Proyectos Destacados",
+    "heroSubtitle": "Estamos orgullosos de servir a organizaciones que marcan la diferencia. Aquí hay un vistazo a algunos de los trabajos que hemos realizado.",
+    "viewProjects": "Ver Proyectos →",
+    "viewOnGitHub": "Ver en GitHub →",
+    "backToProjects": "← Todos los Proyectos",
+    "avInstallation": {
+      "label": "Instalación AV",
+      "description": "Sistemas audiovisuales personalizados diseñados e instalados para un impacto duradero.",
+      "heroTitle": "Proyectos de Instalación AV",
+      "heroSubtitle": "Iglesias y organizaciones que hemos equipado con sistemas audiovisuales profesionales."
+    },
+    "liveEvents": {
+      "label": "Eventos en Vivo",
+      "description": "Producción profesional para conferencias, conciertos y ocasiones especiales.",
+      "heroTitle": "Proyectos de Eventos en Vivo",
+      "heroSubtitle": "Eventos y organizaciones que hemos apoyado con servicios de producción profesional."
+    },
+    "itProjects": {
+      "label": "Proyectos de Informática",
+      "description": "Infraestructura de redes, soluciones de software e integraciones técnicas.",
+      "heroTitle": "Proyectos de Informática",
+      "heroSubtitle": "Soluciones técnicas y proyectos de software que hemos construido e implementado."
+    }
   },
   "PrivacyPolicy": {
     "meta": {

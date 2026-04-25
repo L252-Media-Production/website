@@ -6,6 +6,7 @@
     "eventProduction": "Event Production",
     "itNetwork": "IT & Network",
     "training": "Training",
+    "projects": "Projects",
     "about": "About",
     "clientPortal": "Client Portal",
     "contactUs": "Contact Us"
@@ -18,6 +19,7 @@
     "eventProduction": "Event Production",
     "itNetwork": "IT & Network",
     "training": "Training",
+    "projects": "Projects",
     "aboutUs": "About Us",
     "contact": "Contact",
     "getAQuote": "Get a Quote",
@@ -362,6 +364,36 @@
         "body": "Training sessions tailored to your team's current skill level, your specific equipment, and your schedule."
       }
     ]
+  },
+  "Projects": {
+    "meta": {
+      "title": "Projects | L252 Media Production",
+      "description": "A look at some of the organizations and events we've had the privilege to serve — AV installations, live events, and IT projects."
+    },
+    "badge": "Our Work",
+    "heroTitle": "Featured Projects",
+    "heroSubtitle": "We're proud to serve organizations that make a difference. Here's a look at some of the work we've done.",
+    "viewProjects": "View Projects →",
+    "viewOnGitHub": "View on GitHub →",
+    "backToProjects": "← All Projects",
+    "avInstallation": {
+      "label": "AV Installation",
+      "description": "Custom audio-visual systems designed and installed for lasting impact.",
+      "heroTitle": "AV Installation Projects",
+      "heroSubtitle": "Churches and organizations we've equipped with professional audio-visual systems."
+    },
+    "liveEvents": {
+      "label": "Live Events",
+      "description": "Professional production for conferences, concerts, and special occasions.",
+      "heroTitle": "Live Event Projects",
+      "heroSubtitle": "Events and organizations we've supported with professional production services."
+    },
+    "itProjects": {
+      "label": "IT Projects",
+      "description": "Network infrastructure, software solutions, and technical integrations.",
+      "heroTitle": "IT Projects",
+      "heroSubtitle": "Technical solutions and software projects we've built and deployed."
+    }
   },
   "PrivacyPolicy": {
     "meta": {
