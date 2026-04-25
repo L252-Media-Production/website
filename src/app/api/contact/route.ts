@@ -14,6 +14,21 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const ALLOWED_SERVICES = new Set(["av-installation", "event-production", "it-network", "training", "multiple", "unsure", ""]);
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Detects random-looking strings (bot-generated gibberish) by checking for
+// an abnormally high ratio of uppercase letters in non-leading positions within a word,
+// or words that are unrealistically long.
+function isRandomString(str: string): boolean {
+  const words = str.trim().split(/\s+/);
+  for (const word of words) {
+    if (word.length > 20) return true;
+    if (word.length < 6) continue;
+    const midChars = word.slice(1);
+    const midUpperCount = [...midChars].filter((c) => c >= "A" && c <= "Z").length;
+    if (midUpperCount / midChars.length > 0.28) return true;
+  }
+  return false;
+}
+
 function escapeHtml(str: string): string {
   return str
     .replace(/&/g, "&amp;")
@@ -31,7 +46,12 @@ export async function POST(request: NextRequest) {
   }
 
   const body = await request.json();
-  const { firstName, lastName, email, organization, service, message, recaptchaToken } = body;
+  const { firstName, lastName, email, organization, service, message, recaptchaToken, website } = body;
+
+  // Honeypot: bots fill hidden fields, humans leave them empty
+  if (website) {
+    return NextResponse.json({ success: true });
+  }
 
   if (!firstName || !lastName || !email || !message || !recaptchaToken) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -67,6 +87,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid service selection" }, { status: 400 });
   }
 
+  // Reject bot-generated gibberish (random character sequences)
+  if (
+    isRandomString(firstName) ||
+    isRandomString(lastName) ||
+    (organization && isRandomString(organization)) ||
+    isRandomString(message)
+  ) {
+    return NextResponse.json({ error: "Message flagged as spam" }, { status: 400 });
+  }
+
   // Verify reCAPTCHA
   const recaptchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
     method: "POST",
@@ -74,7 +104,7 @@ export async function POST(request: NextRequest) {
     body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
   });
   const recaptchaData = await recaptchaRes.json();
-  if (!recaptchaData.success || recaptchaData.score < 0.5 || recaptchaData.action !== "contact_form") {
+  if (!recaptchaData.success || recaptchaData.score < 0.7 || recaptchaData.action !== "contact_form") {
     return NextResponse.json({ error: "reCAPTCHA verification failed" }, { status: 400 });
   }
 

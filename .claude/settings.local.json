@@ -12,7 +12,8 @@
       "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/messages\")",
       "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/av-installation\")",
       "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/event-production\")",
-      "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/it-network\")"
+      "Bash(mkdir -p \"/Users/jcreyes/Library/Mobile Documents/com~apple~CloudDocs/VSCode/l252mp/website/src/app/[locale]/services/it-network\")",
+      "Bash(npx tsc *)"
     ]
   }
 }
