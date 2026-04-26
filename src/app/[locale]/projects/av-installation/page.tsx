@@ -20,6 +20,11 @@ export default async function AVInstallationProjectsPage({ params }: { params: P
 
 const PROJECTS = [
   {
+    name: "Plinton Curry Funeral Home",
+    logo: undefined,
+    description: undefined,
+  },
+  {
     name: "Yonkers Spanish",
     logo: "/images/sda-logo.png",
     description: undefined,

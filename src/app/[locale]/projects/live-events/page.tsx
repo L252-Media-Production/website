@@ -30,6 +30,11 @@ const PROJECTS = [
     description: undefined,
     href: "/projects/live-events/gnyc" as const,
   },
+  {
+    name: "MS SOUND",
+    logo: "A1 and A2 Audio Engineer services for various church Sunday services.",
+    description: undefined,
+  },
 ];
 
 function LiveEventsProjectsContent() {
