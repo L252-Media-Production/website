@@ -21,13 +21,13 @@ export default async function AVInstallationProjectsPage({ params }: { params: P
 const PROJECTS = [
   {
     name: "Plinton Curry Funeral Home",
-    logo: undefined,
-    description: undefined,
+    logo: "/images/plinton-curry-logo.jpg",
+    description: "Set up and configuration of a new AV system for a funeral home, including a PTZOptics camera, Blackmagic Design ATEM Mini switcher, and Yamaha DM3 and Shure microphones for high-quality audio and video livestreaming during funeral services.",
   },
   {
     name: "Yonkers Spanish",
     logo: "/images/sda-logo.png",
-    description: undefined,
+    description: "Network Installation and custom Vmix PC for livestreaming Sabbath services",
   },
   {
     name: "Fort Washington Spanish",

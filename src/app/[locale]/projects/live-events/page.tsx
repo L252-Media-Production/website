@@ -32,8 +32,8 @@ const PROJECTS = [
   },
   {
     name: "MS SOUND",
-    logo: "A1 and A2 Audio Engineer services for various church Sunday services.",
-    description: undefined,
+    logo: undefined,
+    description: "A1 and A2 Audio Engineer services for various church Sunday services.",
   },
 ];
 
